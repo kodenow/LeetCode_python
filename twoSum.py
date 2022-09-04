@@ -4,19 +4,14 @@ from pprint import pprint
 
 class Solution:
     def twoSum(nums, target):
-            valCount = len(nums)
-            maxGap = 0
-            index = False
-            array = list(nums)
-            hashMap = {} # val:index
- 
-            for i in range(0, valCount, 1):             
-                diff = target - nums[i] #when you pop array.pop, you are also popping nums, the heck
-                print(hashMap)
-                if diff in hashMap:
-                    return [hashMap[diff],i]
-                hashMap[nums[i]] = i
-            return False #though it says that all test cases is guaranteed to return something, just adding it here for best practice
+        hashMap = {} # val:index
+
+        for i, n in enumerate(nums):       
+            diff = target - n
+            if diff in hashMap:
+                return [hashMap[diff],i]
+            hashMap[nums[i]] = i
+        return False #though it says that all test cases is guaranteed to return something, just adding it here for best practice
                 
 # array = [3,2,4]
 # array = [3,3]
