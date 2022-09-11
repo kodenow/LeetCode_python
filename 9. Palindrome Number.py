@@ -1,3 +1,4 @@
+#fastest and correct solution
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         #There is no built-in function to reverse a String in Python. https://www.w3schools.com/python/python_howto_reverse_string.asp 
